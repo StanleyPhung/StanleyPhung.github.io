@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #1e2a38, #101418);
+    font-family: 'Arial', sans-serif;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  #main {
+    text-align: center;
+  }
+  
+  .frostpunk-button {
+    background: #2d3e50;
+    border: 2px solid #7ea3c1;
+    border-radius: 50px;
+    padding: 15px 30px;
+    font-size: 1.2em;
+    color: #ffffff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .frostpunk-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    height: 120%;
+    background: radial-gradient(circle, transparent, #7ea3c1);
+    opacity: 0.1;
+    transform: translate(-50%, -50%) scale(0);
+    transition: transform 0.5s ease, opacity 0.3s ease;
+  }
+  
+  .frostpunk-button:hover::after {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.3;
+  }
+  
+  .frostpunk-button:hover {
+    background: #3e536e;
+  }
+  
